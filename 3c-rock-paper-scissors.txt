@@ -1,0 +1,6 @@
+The user is welcomed to the game from the prompt window
+The user is prompted to choose between 1-3 (rock-paper-scissors) and will be stored as getHumanChoice function
+It will be matched against a computer choice randomly
+Create variables that will store the scores of human and computer
+The game is best of 3, so whoever gets their score to 3 is the winner
+The user can choose whether to restart game or stop the game
