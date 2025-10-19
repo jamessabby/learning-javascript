@@ -1,0 +1,10 @@
+1. Revise your logic of program flow before start coding
+2. Clearly expose the structure of the page through IDs of divs
+3. Use the correct indentation
+4. Write exploratory comments
+5. Avoid abusing comments
+6. Avoid extremly large functions
+7. Use naming standards for functions and variables
+8. Treat changes with caution
+9. Avoid Indiscriminate Mixing of Coding Languages
+10.    Summarize your imports
