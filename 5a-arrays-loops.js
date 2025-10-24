@@ -107,22 +107,66 @@ TASKS
 1
 // 4) Sum input numbers 
 
-function sumInput() {
-  numbers = [];
+// function sumInput() {
+//   numbers = [];
 
-  while (true) {
+//   while (true) {
 
-    let value = prompt("Enter any number:", 0);
+//     let value = prompt("Enter any number:", 0);
 
-    if (value === "" || value === null || !isFinite(value)) break;
-    numbers.push(+value); // turns a string input into integer1
-  }
+//     if (value === "" || value === null || !isFinite(value)) break;
+//     numbers.push(+value); // turns a string input into integer1
+//   }
 
+//   let sum = 0;
+//   for (let number of numbers) {
+//     sum += number;
+//   }
+//   return sum;
+// }
+
+// alert( sumInput() );
+
+/*
+============================================
+ARRAY METHODS
+=============================================
+*/
+
+// let arr = ["I", "go", "home"];
+
+// delete arr[1];
+// console.log(arr)
+// console.log(arr.length);
+ 
+// The element was removed, but the array still has 3 elements
+
+// let arr = ["I", "study", "right", "now"];
+// console.log(arr)
+
+// arr.splice(2, 0, "complex", "language") // from index 2, add this elements without any removals 
+
+// arr.splice(0,3, "Let's","Dance"); // from index 0, remove 3 elements and replace
+
+// console.log(arr)
+
+// let arr = [0, 1, 2, 5];
+// arr.splice(-1, 0, 3, 4); 
+
+// from index -1 (one step from the end)
+// delete 0 elements,
+// then insert 3 and 4
+
+function sumOfTripleEvens(array) {
   let sum = 0;
-  for (let number of numbers) {
-    sum += number;
+  for (let i = 0; i <= array.length; i++  ) {
+    if (array[i] % 2 == 0) {
+      sum += array[i] * 3;
+    }
   }
   return sum;
 }
 
-alert( sumInput() );
+let arr = [0,1,2,3,4,5,6];
+
+console.log(sumOfTripleEvens(arr));
