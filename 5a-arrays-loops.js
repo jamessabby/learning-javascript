@@ -157,16 +157,181 @@ ARRAY METHODS
 // delete 0 elements,
 // then insert 3 and 4
 
-function sumOfTripleEvens(array) {
-  let sum = 0;
-  for (let i = 0; i <= array.length; i++  ) {
-    if (array[i] % 2 == 0) {
-      sum += array[i] * 3;
-    }
-  }
-  return sum;
+/*
+============================================
+ARRAY FUNCTION
+=============================================
+*/
+
+// function sumOfTripledEvens(array) {
+//   let sum = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 == 0) {
+//       let tripledEvenNumber = array[i] * 3;
+//       sum += tripledEvenNumber;
+//     }
+//   }
+//   return sum;
+// } 
+
+// let arr = [1,2,3,4,5,6];
+// console.log(sumOfTripledEvens(arr));
+// console.log("\n");
+
+/*
+============================================
+MAP METHOD
+=============================================
+*/
+
+// function addOne(num) {
+//   return num + 1;
+// } 
+
+// let arr = [0,1,2,3,4,5];
+// let mappedArr = arr.map(addOne);
+// console.log(arr);
+// console.log(mappedArr);
+
+// CALLBACK FUNCTION
+// let arr = [1,2,3,4,5];
+// // let mappedArr = arr.map((num) => num + 1);
+// // console.log(mappedArr);
+
+/*
+============================================
+FILTER METHOD
+=============================================
+*/
+
+// function isOdd(num) {
+  
+//   return num % 2 != 0;
+// }
+
+// let arr = [1,2,3,4,5];
+// let filteredArr = arr.filter(isOdd);
+
+// console.log(arr);
+// console.log(filteredArr);
+
+/*
+============================================
+REDUCE METHOD
+=============================================
+*/
+
+// const arr = [1,2,3,4,5];
+
+// const productOfAllNums = arr.reduce((total, currentItem) => {
+//   return total * currentItem;
+// }, 1);
+
+// console.log(productOfAllNums);
+// console.log(arr);
+
+/*
+============================================
+PRACTICE 
+=============================================
+*/
+// let arr1 = [1,2,3,4,5,6];
+
+// function sumOfTripledEvensThreeMethods(array) {
+//   return array
+//   .filter((num) => num % 2 == 0)
+//   .map((num) => num * 3)
+//   .reduce((total, currentNum) => {
+//     return total + currentNum;
+//   }, 0);
+// } 
+// console.log(sumOfTripledEvensThreeMethods(arr1));
+
+/*
+============================================
+ASSIGNMENT 
+=============================================
+*/
+
+let arr = [5, 3, 8, 1];
+
+// From words-with-dashes to camelCase
+
+// function camelize(str) {
+//   return str
+//   .split("-")
+//   .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+//   .join('');
+// }
+
+// console.log(camelize("background-color"));
+// console.log(camelize("hero-image"));
+
+// Filter Range
+
+// function filterRange(arr, a, b) {
+//   return arr
+//   .filter(num => (num >= a && num <= b)); 
+// }
+
+// let filtered = filterRange(arr, 1, 7);
+
+// console.log(filtered);
+
+// Removes numbers in an array that are not in between the arguments
+
+// function filterRangeInPlace(arr, a, b) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let val = arr[i];
+
+//     if (val < a || val > b) {
+//       arr.splice(i, 1);
+//       i--;              // the contents moved to the left after splicing, this line prevents the skipping of one index 
+//     }
+//   }
+// }
+
+// console.log(arr);
+// filterRangeInPlace(arr, 1, 5);
+// console.log(arr);
+
+// Sorts the number of array
+
+// arr.sort((a,b) => a - b);   // sort ascending
+// arr.sort((a,b) => b - a);   // sort descending
+// console.log(arr);
+
+// Copy and sort array
+
+// let stringArray = ["HTML", "JavaScript", "CSS"];
+
+// // function copySorted(arr) {       // my solution
+// //   let copiedArray = arr.slice();
+// //   return copiedArray.sort();
+// // }
+
+// function copySorted(arr) {          // shorter solution
+//   return arr.slice().sort();
+// }
+
+// console.log(copySorted(stringArray));
+// console.log(stringArray);
+
+// Shuffle an array
+
+// Solution 1 using Fisher-Yates Shuffle Modern Algorithm
+
+let numbers = [1, 2, 3];
+console.log(numbers);
+
+let i = numbers.length;   // current value = 3
+let j, temp;
+
+while (i-- > 0) {          // current value = 2
+  j = Math.floor(Math.random() * (i + 1));  // current value = 0 to 2 (random index)
+  temp = numbers[j];    // stores the random index
+  numbers[j] = numbers[i] // swapped values
+  numbers[i] = temp; 
 }
 
-let arr = [0,1,2,3,4,5,6];
-
-console.log(sumOfTripleEvens(arr));
+console.log(numbers);
