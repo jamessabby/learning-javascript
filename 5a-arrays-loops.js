@@ -321,17 +321,36 @@ let arr = [5, 3, 8, 1];
 
 // Solution 1 using Fisher-Yates Shuffle Modern Algorithm
 
-let numbers = [1, 2, 3];
-console.log(numbers);
+// let numbers = [1, 2, 3];
+// console.log(numbers);
 
-let i = numbers.length;   // current value = 3
-let j, temp;
+// let i = numbers.length;   // current value = 3
+// let j, temp;
 
-while (i-- > 0) {          // current value = 2
-  j = Math.floor(Math.random() * (i + 1));  // current value = 0 to 2 (random index)
-  temp = numbers[j];    // stores the random index
-  numbers[j] = numbers[i] // swapped values
-  numbers[i] = temp; 
+// while (i-- > 0) {          // current value = 2
+//   j = Math.floor(Math.random() * (i + 1));  // current value = 0 to 2 (random index)
+//   temp = numbers[j];    // stores the random index
+//   numbers[j] = numbers[i] // swapped values
+//   numbers[i] = temp; 
+// }
+
+// console.log(numbers);
+
+// Filter unique array members
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+ 
+function unique(arr) {
+  let uniqueMembers = [];
+  for (str of arr) {
+    if (!uniqueMembers.includes(str)) {
+      uniqueMembers.push(str);
+    }
+  }
+  return uniqueMembers;
 }
 
-console.log(numbers);
+console.log(unique(strings));
+
