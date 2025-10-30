@@ -1,63 +1,199 @@
-body {
-  margin: 0;
-  background-color: #B0CE88;
-  width: auto;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* Global Styles */
+* {
+  box-sizing: border-box;
 }
 
-.container {
-  height: 300px;
-  max-width: 500px;
-  background-color: #4C763B;
-
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #B0CE88;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-
-  border: solid 2px;
-  padding: 50px;
-  border-radius: 20px;
-  gap: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 h1, h3 {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   color: white;
+  margin: 0;
 }
 
-p {
-  font-family: 'Inter';
+p, label {
+  font-family: 'Inter', sans-serif;
   color: white;
   font-size: 14px;
   line-height: 1.5;
-}
-
-.options {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
+  margin: 0;
 }
 
 button {
   padding: 20px;
   border-radius: 10px;
   border: solid 2px;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   background-color: #FFFD8F;
-  transition: all 0.5  ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background-color: #f7e97c;
-  cursor: pointer;
   transform: scale(1.05);
+}
+
+/* Home Page */
+.homePageContent {
+  max-width: 500px;
+  background-color: #4C763B;
+  padding: 50px;
+  border: solid 2px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.homePageContent header {
+  margin-bottom: 30px;
+}
+
+.projectTitle {
+  margin-bottom: 10px;
+}
+
+.projectNumber {
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+#homePageContent.hide {
+  display: none;
+}
+
+/* Create Flashcards Page */
+
+.createFlashcardsContent {  /* parent */
+  display: none;            /* intial state */
+  width: 100%;
+  max-width: 700px;
+}
+
+#createForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+/* Title and Description Section */
+.titleDescriptionGroup {
+  background-color: #4C763B;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.formHeader {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Flashcards Item Container */
+.flashcardsItemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.flashcardItem {
+  background-color: white;
+  padding: 30px 30px 30px 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.flashcardItem label {
+  color: #333;
+  font-weight: 600;
+}
+
+.itemNumber {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: #4C763B;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Form Inputs */
+.titleInput,
+.descriptionInput,
+.termInput,
+.definitionInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+.titleInput,
+.termInput {
+  height: 45px;
+}
+
+.descriptionInput,
+.definitionInput {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.titleInput:focus,
+.descriptionInput:focus,
+.termInput:focus,
+.definitionInput:focus {
+  outline: none;
+  border-color: #FFFD8F;
+}
+
+/* Action Buttons */
+.addCardBtn,
+.saveBtn {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.saveBtn {
+  background-color: #4C763B;
+  color: white;
+  border-color: #4C763B;
+}
+
+.saveBtn:hover {
+  background-color: #3d5f2f;
 }

@@ -10,21 +10,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+
+  <div id="homePageContent" class="homePageContent">
     <header>
-      <h1 class="project-title">Simple Flashcard App</h1>
-      <h3 class="project-no">Project 1:</h3>
+      <h1 class="projectTitle">Simple Flashcard App</h1>
+      <h3 class="projectNumber">Project 1:</h3>
       <p class="description">Using my knowledge on basic HTML, CSS, localStorage, Arrays, Loops, etc.</p>
     </header>
     <div class="options">
-      <div>
-        <button id="create-btn">Create Flashcards</button>
-      </div>
-      <div>
-        <button id="answer-btn">Answer Flashcards</button>
-      </div>
+      <button id="createBtn">Create Flashcards</button>
+      <button id="answerBtn">Answer Flashcards</button>
     </div>
   </div>
 
+  <div id="createFlashcardsContent" class="createFlashcardsContent">
+    <form id="createForm">
+      
+      <div class="formGroup titleDescriptionGroup"> 
+        <h1 class="formHeader">Create new flashcards</h1>
+        <label for="title">Title</label>
+        <input class="titleInput" type="text" id="title" placeholder="Enter a title">
+        <label for="description">Description</label>
+        <textarea class="descriptionInput" id="description" placeholder="Enter a description..."></textarea>
+      </div>
+
+      <div class="flashcardsItemContainer">
+        <div class="formGroup flashcardItem"> 
+          <div class="itemNumber">1</div>
+          <label for="term1">Term</label>
+          <input class="termInput" type="text" id="term1" placeholder="Enter term">
+          <label for="definition1">Definition</label>
+          <textarea class="definitionInput" id="definition1" placeholder="Enter definition..."></textarea>
+        </div>
+
+        <div class="formGroup flashcardItem"> 
+          <div class="itemNumber">2</div>
+          <label for="term2">Term</label>
+          <input class="termInput" type="text" id="term2" placeholder="Enter term">
+          <label for="definition2">Definition</label>
+          <textarea class="definitionInput" id="definition2" placeholder="Enter definition..."></textarea>
+        </div>
+
+        <div class="formGroup flashcardItem"> 
+          <div class="itemNumber">3</div>
+          <label for="term3">Term</label>
+          <input class="termInput" type="text" id="term3" placeholder="Enter term">
+          <label for="definition3">Definition</label>
+          <textarea class="definitionInput" id="definition3" placeholder="Enter definition..."></textarea>
+        </div>
+
+        <div class="formGroup flashcardItem"> 
+          <div class="itemNumber">4</div>
+          <label for="term4">Term</label>
+          <input class="termInput" type="text" id="term4" placeholder="Enter term">
+          <label for="definition4">Definition</label>
+          <textarea class="definitionInput" id="definition4" placeholder="Enter definition..."></textarea>
+        </div>
+
+        <div class="formGroup flashcardItem"> 
+          <div class="itemNumber">5</div>
+          <label for="term5">Term</label>
+          <input class="termInput" type="text" id="term5" placeholder="Enter term">
+          <label for="definition5">Definition</label>
+          <textarea class="definitionInput" id="definition5" placeholder="Enter definition..."></textarea>
+        </div>
+      </div>
+
+      <button type="button" id="addCardBtn" class="addCardBtn">+ Add Card</button>
+      <button type="submit" id="saveBtn" class="saveBtn">Save Flashcards</button>
+      
+    </form>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
