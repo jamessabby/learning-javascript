@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   answerBtn.addEventListener('click', () => {    
     homePage.classList.add('hide');
     answerFlashcards.style.display = 'flex';
+    loadFlashcards();
   });
 
 
@@ -73,6 +74,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // answer flashcards script
 
+  let correctAnswers = 0;
+
+  let currentCardIndex = 0;
+  let flashcardData = null;
+
+  const question = document.getElementById('question');
+  const correctAnswerBtn = document.getElementById('correctAnswer');
+  const wrongAnswerBtn = document.getElementById('wrongAnswer');
+
+  function loadFlashcards() {
+    const savedData = localStorage.getItem('myFlashcards');
+    flashcardData = JSON.parse(savedData);
+
+    question.textContent = flashcardData.cards[currentCardIndex].definition;
+  }
+
+  function nextQuestion() {
+    currentCardIndex++;
+
+    if (currentCardIndex < flashcardData.cards.length) {
+      question.textContent = flashcardData.cards[currentCardIndex].definition;
+    } else {
+      question.textContent = `All Done! You got ${correctAnswers} correct answers out of ${flashcardData.cards.length}!`;
+      correctAnswerBtn.style.display = 'none';
+      wrongAnswerBtn.style.display = 'none';
+
+    }
+  }
   
+  correctAnswerBtn.addEventListener('click', () => {
+    nextQuestion();
+    correctAnswers++;
+  })
+
+  wrongAnswerBtn.addEventListener('click', () => {
+    nextQuestion();
+  })
   
 });
