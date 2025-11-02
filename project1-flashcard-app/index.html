@@ -18,8 +18,8 @@
       <p class="description">Using my knowledge on basic HTML, CSS, localStorage, Arrays, Loops, etc.</p>
     </header>
     <div class="options">
-      <button id="createBtn">Create Flashcards</button>
-      <button id="answerBtn">Answer Flashcards</button>
+      <button id="createBtn" class="createBtn">Create Flashcards</button>
+      <button id="answerBtn" class="answerBtn">Answer Flashcards</button>
     </div>
   </div>
 
@@ -80,6 +80,18 @@
       <button type="submit" id="saveBtn" class="saveBtn">Save Flashcards</button>
       
     </form>
+  </div>
+
+  <div id="answerFlashcardsContent" class="answerFlashcardsContent">
+    <div id="flashcardContainer" class="flashcardContainer">
+      <div id="flashcardQuestion"class="flashcardQuestion">
+        <h3 id="question" class="question">Question</h3>
+      </div>
+      <div id="flashcardProgress" class="flashcardProgress">
+        <button id="correctAnswer" class="correctAnswer">✔</button>
+        <button id="wrongAnswer" class="wrongAnswer">❌</button>
+      </div>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>

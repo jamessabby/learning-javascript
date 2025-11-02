@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   answerBtn.addEventListener('click', () => {    
     homePage.classList.add('hide');
-    createFlashcards.style.display = 'flex';
+    answerFlashcards.style.display = 'flex';
   });
 
 
@@ -73,5 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // answer flashcards script
 
+  
   
 });

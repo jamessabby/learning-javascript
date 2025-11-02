@@ -27,7 +27,7 @@ p, label {
   margin: 0;
 }
 
-button {
+ .createBtn, .answerBtn, .addCardBtn, .saveBtn {
   padding: 20px;
   border-radius: 10px;
   border: solid 2px;
@@ -181,19 +181,84 @@ button:hover {
   border-color: #FFFD8F;
 }
 
-/* Action Buttons */
-.addCardBtn,
-.saveBtn {
+/* Answer Flashcards Page */
+.answerFlashcardsContent {
+  display: none;
   width: 100%;
-  margin-top: 5px;
+  max-width: 700px;
 }
 
-.saveBtn {
-  background-color: #4C763B;
+.flashcardContainer {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  padding: 50px;
+  width: 100%;
+  height: 500px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flashcardQuestion {
+  flex: 1;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+}
+
+.flashcardProgress {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+.correctAnswer,
+.wrongAnswer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.correctAnswer {
+  background-color: #e8f5e9;
+  color: #4caf50;
+}
+
+.correctAnswer:hover {
+  background-color: #4caf50;
   color: white;
-  border-color: #4C763B;
+  transform: scale(1.1);
 }
 
-.saveBtn:hover {
-  background-color: #3d5f2f;
+.wrongAnswer {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.wrongAnswer:hover {
+  background-color: #f44336;
+  color: white;
+  transform: scale(1.1);
 }
